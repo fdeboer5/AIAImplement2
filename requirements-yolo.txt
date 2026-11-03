@@ -1,0 +1,6 @@
+# Optional: real YOLOv8 detection (heavy: needs a paid instance with 2 GB+ RAM)
+-r requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+ultralytics
+opencv-python-headless

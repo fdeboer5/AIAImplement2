@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: aimplement
+    runtime: python
+    plan: starter            # free works for the light version, but sleeps after 15 min idle
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run aimplement_app.py --server.port $PORT --server.address 0.0.0.0
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
